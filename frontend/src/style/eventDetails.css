@@ -1,0 +1,82 @@
+.eventDetails {
+  display: flex;
+  margin: 2rem 0px;
+  align-items: center;
+  justify-content: center;
+}
+.eventDetails img {
+  border-radius: 10px;
+}
+.eventDetails_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin-left: 100px;
+  /* align-items: center; */
+}
+.eventDetails_details_des {
+  /* font-family: cursive; */
+  font-style: italic;
+  font-weight: 400;
+}
+.eventDetails_details_location {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.eventDetails_details_date {
+  display: flex;
+  justify-content: space-between;
+}
+.eventDetails_details_date p {
+  font-weight: 400;
+}
+.eventDetails_details_Quantity {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+/* Style the select element */
+.custom-select {
+  margin-left: 1rem;
+  background-color: #f8f9fa; /* Background color */
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  /* padding: 4px 4px; Padding inside the select box */
+  font-size: 12px; /* Font size */
+  color: #495057; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  height: 2rem;
+}
+
+/* Style the select element on focus */
+.custom-select:focus {
+  border-color: #80bdff; /* Border color on focus */
+  outline: none; /* Removes default outline */
+}
+
+.custom-button {
+  background-color: black; /* Background color */
+  color: white; /* Text color */
+  border: none; /* Removes default border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Style the button on hover */
+.custom-button:hover {
+  background-color: #333; /* Darker background color on hover */
+}
+
+.eventDetails_details button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.toast_container {
+  z-index: 100;
+}

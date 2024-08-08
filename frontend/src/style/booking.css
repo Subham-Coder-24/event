@@ -1,0 +1,90 @@
+.booking {
+  width: 80%;
+}
+.booking-list {
+  list-style-type: none; /* Removes default list bullets */
+  padding: 0; /* Removes default padding */
+  position: relative;
+}
+.booking_content_pagination {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+
+/* Style for each list item */
+.booking-item {
+  background-color: #f9f9f9; /* Light background color */
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.ok {
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding inside each list item */
+  margin-bottom: 10px; /* Space between list items */
+  background-color: #f9f9f9; /* Light background color */
+  display: flex;
+  justify-content: space-between;
+}
+/* Style for each paragraph */
+.booking-item p {
+  margin: 5px 0; /* Space between paragraphs */
+  font-size: 15px; /* Font size for paragraphs */
+  margin: 10px 0px;
+}
+
+.booking-item p:last-child {
+  font-weight: bold;
+  color: #333;
+}
+.booking_content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.img2 {
+  width: 20%;
+  height: 250px;
+}
+.booking-item-text {
+  padding: 20px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  background-color: #333333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: green;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+  color: #333;
+  font-weight: bold;
+}
+.confirmed > img {
+  z-index: 1;
+  width: 40px;
+}

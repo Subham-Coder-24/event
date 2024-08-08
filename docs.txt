@@ -1,0 +1,16 @@
+navbar
+banner
+categories
+frequenty asked question
+footer
+
+
+admin
+create event
+create categories
+
+
+npx prisma migrate
+npx prisma migrate deploy
+npx prisma generate
+npx prisma studio

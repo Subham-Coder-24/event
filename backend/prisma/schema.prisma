@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  name      String
+  bookings  Booking[]
+  role      Role      @default(USER)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Event {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  date        DateTime
+  endTime     DateTime?
+  location    String
+  price       Float
+  categoryId  Int?
+  category    Category? @relation(fields: [categoryId], references: [id])
+  bookings    Booking[]
+  img         String? 
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Booking {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  user      User      @relation(fields: [userId], references: [id])
+  eventId   Int
+  event     Event     @relation(fields: [eventId], references: [id])
+  quantity  Int
+  total     Float
+  payment   Payment?
+  paymentId Int?      @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Category {
+  id        Int       @id @default(autoincrement())
+  name      String
+  events    Event[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Payment {
+  id        Int       @id @default(autoincrement())
+  bookingId Int       @unique
+  booking   Booking   @relation(fields: [bookingId], references: [id])
+  amount    Float
+  status    String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}

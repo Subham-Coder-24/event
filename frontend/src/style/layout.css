@@ -1,0 +1,64 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar-menu li a,
+.navbar-user div a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.content {
+  flex-grow: 1;
+  /* padding: 2rem; */
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  /* align-items: center; */
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+.navbar-user img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.navbar-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

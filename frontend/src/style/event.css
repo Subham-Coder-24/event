@@ -1,0 +1,110 @@
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event_header {
+  position: relative;
+  background-image: url("https://d10j3mvrs1suex.cloudfront.net/helpdesk/1171b414f42f3150bf4af1c2bfe0dd0347f604f2/original/bzblog-tmwd-beckett-img01.jpg?1529673070");
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 400px; /* Adjust the height as needed */
+  width: 1300px; /* Ensures the header takes the full width */
+}
+
+.event_header {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.event_input {
+  padding: 20px 100px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  width: 50%;
+}
+.event_input > input {
+  border: none;
+  outline: none;
+  height: 30px;
+  font-size: 30px;
+  width: 100%;
+}
+.event_header > h3 {
+  color: white;
+  font-size: 40px;
+}
+.event_category {
+  display: flex;
+}
+.event_category_button {
+  padding: 30px 50px;
+  border: 0.1px solid rgb(183, 179, 179);
+  border-radius: 10px;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+
+.event_category_button > button {
+  outline: none;
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.event_listing {
+  display: flex;
+
+  /* align-items: center; */
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+.event_listing_items {
+  border: 0.1px solid rgb(204, 204, 204);
+  margin: 1rem 1rem;
+  /* width: ; */
+  width: 250px;
+  height: 450px;
+  border-radius: 10px;
+}
+.event_listing_items > img {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 10px 0px 0px;
+}
+.event_listing_content {
+  padding: 0px 1rem;
+}
+
+.event_listing a {
+  color: black;
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes the link text bold */
+  /* padding: 5px 10px; Adds some padding */
+  border-radius: 5px; /* Rounds the corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+.event_listing_items .event_category {
+  font-weight: 300;
+}
+.event_location,
+.event_price {
+  font-weight: 300;
+}
+.scale-on-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* .colorful_text {
+ 
+} */
